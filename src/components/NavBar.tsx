@@ -12,7 +12,10 @@ const NavBar = () => {
       <nav className="border-gray-300 bg-gray-200 dark:bg-gray-800 dark:border-gray-800 shadow-lg">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
-            <h1> Empresa </h1>
+           <img className="w-40" src="/src/assets/bitninja_logo.png" alt="Logo"  />
+            <h1 className="text-2xl font-extrabold  text-gray-900 dark:text-gray-100"  style={{ fontStretch: 'expanded' }}>
+              BitNinjas
+            </h1>
           </div>
 
           <button
