@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 // Componente CursorTrail (Separado)
 const CursorTrail = () => {
-  const NUM_CIRCLES = 10;
+  const NUM_CIRCLES = 20;
   const [circles, setCircles] = useState(
     new Array(NUM_CIRCLES).fill({ x: 0, y: 0 })
   );
@@ -68,7 +68,7 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    document.title = "Empresa - Portfólio";
+    document.title = "BitNinjas";
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -81,7 +81,7 @@ function App() {
       <NavBar />
 
       {/* Hero Section */}
-      <header className="h-screen flex items-center justify-center text-center bg-blue-700">
+      <header className="h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-900 to-indigo-900">
   <motion.h1
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ function App() {
       <section id="sobre" className="py-20 px-10 bg-gray-800">
         <h2 className="text-3xl font-semibold text-center mb-6">Sobre Nós</h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center">
-        A Bit Ninja é uma empresa especializada em soluções tecnológicas e capacitação profissional, oferecendo serviços inovadores para empresas e indivíduos que desejam se destacar no mundo digital. Nosso foco é fornecer tecnologia de ponta e treinamento de alta qualidade para impulsionar negócios e carreiras.
+        A BitNinja é uma empresa especializada em soluções tecnológicas e capacitação profissional, oferecendo serviços inovadores para empresas e indivíduos que desejam se destacar no mundo digital. Nosso foco é fornecer tecnologia de ponta e treinamento de alta qualidade para impulsionar negócios e carreiras.
         </p>
       </section>
 
