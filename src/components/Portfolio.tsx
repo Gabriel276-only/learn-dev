@@ -31,7 +31,7 @@ const projetos = [
   },
   { 
     nome: "Cybersegurança", 
-    link: "../servicos/portfolio/cb-sec",
+    link: "../servicos/portfolio/cyberseguranca",
     descricao: "Soluções completas de segurança digital para proteger seus dados e sistemas."
   },
 ];
