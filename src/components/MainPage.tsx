@@ -1,11 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { TypeAnimation } from 'react-type-animation';
 import { motion } from "framer-motion";
 import {Link} from "react-router-dom";
-import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Portfolio from "./Portfolio.tsx";
+import HeroSection from "./hero.tsx";
+
 
 // Componente CursorTrail (Separado)
 const CursorTrail = () => {
@@ -14,9 +15,22 @@ const CursorTrail = () => {
     new Array(NUM_CIRCLES).fill({ x: 0, y: 0 })
   );
   const circlesRef = useRef(circles);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    // Verifica se a tela é grande o suficiente para ser considerada desktop
+    const mediaQuery = window.matchMedia("(min-width: 1024px)"); // ou outro breakpoint
+    setIsDesktop(mediaQuery.matches);
+
+    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+      setIsDesktop(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
     const handleMouseMove = (e: MouseEvent) => {
+      if (!isDesktop) return; // Sai se não for desktop
+
       const newCircles = [...circlesRef.current];
       newCircles[0] = { x: e.clientX, y: e.clientY };
 
@@ -32,18 +46,25 @@ const CursorTrail = () => {
     };
 
     const animate = () => {
-      setCircles(circlesRef.current);
+      if (isDesktop) {
+        setCircles(circlesRef.current);
+      }
       requestAnimationFrame(animate);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    if (isDesktop) {
+      window.addEventListener("mousemove", handleMouseMove);
+    }
     const animationFrame = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
       cancelAnimationFrame(animationFrame);
     };
-  }, []);
+  }, [isDesktop]);
+
+  if (!isDesktop) return null; // Não renderiza em mobile/tablet
 
   return (
     <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
@@ -78,46 +99,9 @@ function App() {
     <div className="bg-gray-900 text-white">
       <CursorTrail /> {/* Adicionando efeito de rastro */}
 
-      <NavBar />
-
-      {/* Hero Section */}
-      <header className="h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-900 to-indigo-900">
-  <motion.h1
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="text-5xl font-bold"
-  >
-    <h1 className="font-bold text-5xl">Na BitNinja você encontra</h1>
-    <TypeAnimation
-      sequence={[
-        'Soluções educacionais inovadoras',
-        1500,
-        'Plataformas de suporte personalizadas',
-        1500,
-        'Consultoria em integração tecnológica',
-        1500,
-        'Ferramentas de aprendizado interativas',
-        1500,
-        'Transformação digital para empresas e escolas',
-        1500,
-      ]}
-      wrapper="span"
-      speed={60}
-      style={{
-        fontSize: '0.8em',
-        display: 'inline-block',
-        margin: '30px',
-        opacity: 0.9,
-        transition: 'opacity 0.3s ease-in-out',
-        color: 'cyan',
-        
-        
-      }}
-      repeat={Infinity}
-    />
-  </motion.h1>
-</header>
+      
+   
+<HeroSection/>
 
 
       {/* Sobre */}
@@ -135,7 +119,8 @@ function App() {
     {[
       { nome: "Projetos Educacionais para Escolas do Futuro", link: "/servicos/educacao" },
       { nome: "Consultoria e Treinamento para Empresas in Company", link: "/servicos/consultoria" },
-      { nome: "Criação de Sites e Aplicações Mobile", link: "/servicos/criacao" }
+      { nome: "Criação de Sites e Aplicações Mobile", link: "/servicos/criacao" },
+
     ].map((service, index) => (
       <motion.div
         key={index}
@@ -148,23 +133,12 @@ function App() {
       </motion.div>
     ))}
   </div>
+
+
 </section>
 
       {/* Portfólio */}
-      <section id="portfolio" className="py-20 px-10 bg-gray-800">
-        <h2 className="text-3xl font-semibold text-center mb-6">Nosso Portfólio</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {["Programação Web", "Robótica Educacional", "Jogos Digitais", "Aplicações para Dispositivos Móveis", "Administração de Banco de Dados", "Cybersegurança"].map((projeto, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="p-6 bg-gray-700 rounded-lg text-center shadow-xl border border-gray-600 hover:border-blue-400 transition-all"
-            >
-              <h3 className="text-lg font-semibold text-blue-300">{projeto}</h3>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+     <Portfolio/>
 
       {/* Botão Voltar ao Topo */}
       {scrolled && (
@@ -183,3 +157,4 @@ function App() {
 }
 
 export default App;
+

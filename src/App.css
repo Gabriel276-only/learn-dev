@@ -1,11 +1,69 @@
-.cursor-light {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle, rgba(10, 121, 185, 0.5) 0%, rgba(0, 162, 255, 0) 80%);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease-out;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.fonts-alt {
+  font-family: Impact, sans-serif;
+  font-weight: 500;
+  transform: scaleX(1.1); /* Mantém um visual largo sem distorcer muito */
+  letter-spacing: 2px; /* Deixa o texto mais equilibrado */
+  display: inline-block;
+}
+
+/* Cursor Light aprimorado */
+.cursor-light {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgb(0, 162, 255) 0%, rgba(0, 162, 255, 0) 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* Hero Section refinada */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background: url("./assets/bg-bitninjas.jpg") no-repeat center center/cover;
+  padding: 20px;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Ajustado para melhor contraste */
+  backdrop-filter: blur(20px); /* Mantém o efeito de desfoque */
+  z-index: -1;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}

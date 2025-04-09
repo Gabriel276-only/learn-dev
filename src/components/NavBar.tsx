@@ -12,11 +12,11 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="border-gray-300 bg-gray-200 dark:bg-gray-800 dark:border-gray-800 shadow-lg">
+      <nav className="border-gray-300 bg-gray-200 dark:bg-gray-800 dark:border-gray-800 shadow-lg relative w-full ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
            <img className="w-40 flex left" src={logo} alt="Logo"  />
-            <h1 className="text-2xl font-extrabold  text-gray-900 dark:text-gray-100"  >
+            <h1 className="text-3xl font-extrabold  text-gray-900 dark:text-gray-100 fonts-alt"  >
               BitNinjas
             </h1>
           </div>
@@ -50,10 +50,14 @@ const NavBar = () => {
             id="navbar-solid-bg"
           >
             <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-              <li className="block py-2 px-3 md:p-0 text-white bg-blue-900 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+              <li>
+                <a
+                  href="/"
+                  className="block py-2 px-3 md:p-0 text-white bg-blue-900 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
                   aria-current="page"
                 >
                   Home
+                </a>
               </li>
               <li>
                 
