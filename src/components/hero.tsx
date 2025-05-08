@@ -1,6 +1,10 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+
 import Spline from '@splinetool/react-spline';
+
+
+
 
 const HeroSection = () => {
   return (
@@ -45,8 +49,8 @@ const HeroSection = () => {
         {/* Container Spline - ajustado para responsividade */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <div className="relative w-full h-full">
-            <Spline 
-              scene="https://prod.spline.design/N-lNSAHDTu1wDhvb/scene.splinecode" 
+          <Spline scene="https://prod.spline.design/N-lNSAHDTu1wDhvb/scene.splinecode" 
+
               className="absolute right-0 bottom-0 w-full h-full invisible md:visible md:w-3/4 md:h-3/4 lg:w-2/3 lg:h-2/3 xl:w-1/2 xl:h-1/2"
             />
           </div>

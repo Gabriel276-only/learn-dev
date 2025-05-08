@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import {Link} from "react-router-dom";
 import Portfolio from "./Portfolio.tsx";
 import HeroSection from "./hero.tsx";
+import { Suspense } from "react";
 
 
 // Componente CursorTrail (Separado)
@@ -105,7 +106,7 @@ function App() {
 
 
       {/* Sobre */}
-      <section id="sobre" className="py-20 px-10 bg-gray-800">
+      <section id="sobre" className="py-20 px-10 bg-gray-800 ">
         <h2 className="text-3xl font-semibold text-center mb-6">Sobre Nós</h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center">
         A BitNinja é uma empresa especializada em soluções tecnológicas e capacitação profissional, oferecendo serviços inovadores para empresas e indivíduos que desejam se destacar no mundo digital. Nosso foco é fornecer tecnologia de ponta e treinamento de alta qualidade para impulsionar negócios e carreiras.
@@ -137,9 +138,9 @@ function App() {
 
 </section>
 
-      {/* Portfólio */}
-     <Portfolio/>
-
+<Suspense fallback={<div className="py-20 text-center">Carregando portfólio...</div>}>
+        <Portfolio />
+      </Suspense>
       {/* Botão Voltar ao Topo */}
       {scrolled && (
         <button
