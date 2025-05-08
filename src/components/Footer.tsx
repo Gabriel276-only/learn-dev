@@ -1,11 +1,15 @@
+const year = new Date().getFullYear();
+
+
+
 const Footer = () => {
 
 return (
-<footer id="contato" className="py-10 bg-gray-900 text-center">
+<footer id="contato" className="py-10 bg-gray-950 text-center">
 <p className="text-gray-400">
   Entre em contato:{" "}
   <a href="mailto:contato@empresa.com" className="text-blue-400 hover:text-blue-300">
-    contato@empresa.com
+  contato@bitninjas.com.br
   </a>
 </p>
 <div className="mt-4 flex justify-center space-x-4">
@@ -19,7 +23,7 @@ return (
     GitHub
   </a>
 </div>
-<p className="text-gray-600 text-sm mt-6">&copy; 2025 Empresa. Todos os direitos reservados.</p>
+<p className="text-gray-600 text-sm mt-6">&copy; {year} BitNinjas. Todos os direitos reservados.</p>
 </footer>
 
 )}

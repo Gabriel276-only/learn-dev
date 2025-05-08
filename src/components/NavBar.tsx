@@ -15,10 +15,13 @@ const NavBar = () => {
       <nav className="border-gray-300 bg-gray-200 dark:bg-gray-800 dark:border-gray-800 shadow-lg relative w-full ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
-           <img className="w-40 flex left" src={logo} alt="Logo"  />
-            <h1 className="text-3xl font-extrabold  text-gray-900 dark:text-gray-100 fonts-alt"  >
+           
+    <a className="flex left justify-center items-center" href="/">
+           <img className="w-40 " src={logo} alt="Logo"   />
+            <h1 className="text-4xl text-gray-900 dark:text-gray-100 fonts-alt"  >
               BitNinjas
             </h1>
+           </a>
           </div>
 
             <button

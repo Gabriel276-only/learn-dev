@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import {Link} from "react-router-dom";
-import Footer from "./Footer";
 import Portfolio from "./Portfolio.tsx";
 import HeroSection from "./hero.tsx";
 
@@ -104,6 +103,7 @@ function App() {
 <HeroSection/>
 
 
+
       {/* Sobre */}
       <section id="sobre" className="py-20 px-10 bg-gray-800">
         <h2 className="text-3xl font-semibold text-center mb-6">Sobre Nós</h2>
@@ -150,8 +150,7 @@ function App() {
         </button>
       )}
 
-      {/* Contato */}
-      <Footer />
+
     </div>
   );
 }

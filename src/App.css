@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;700&display=swap');
+
+
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
 .fonts-alt {
-  font-family: Impact, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: 500;
-  transform: scaleX(1.1); /* Mantém um visual largo sem distorcer muito */
-  letter-spacing: 2px; /* Deixa o texto mais equilibrado */
+  transform: scaleX(1.05);
+  letter-spacing: 1.5px;
   display: inline-block;
 }
 
@@ -67,3 +71,4 @@ body {
     padding: 10px;
   }
 }
+
