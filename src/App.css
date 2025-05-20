@@ -15,7 +15,7 @@ body {
   font-family: 'Anton', sans-serif;
   font-weight: 500;
   transform: scaleX(1.05);
-  letter-spacing: 1.5px;
+  letter-spacing: -0.01em;
   display: inline-block;
 }
 
@@ -31,31 +31,6 @@ body {
 }
 
 /* Hero Section refinada */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  background: url("./assets/bg-bitninjas.jpg") no-repeat center center/cover;
-  padding: 20px;
-  z-index: 1;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Ajustado para melhor contraste */
-  backdrop-filter: blur(20px); /* Mantém o efeito de desfoque */
-  z-index: -1;
-}
 
 /* Responsividade */
 @media (max-width: 1024px) {

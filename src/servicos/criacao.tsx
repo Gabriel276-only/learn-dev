@@ -13,7 +13,7 @@ const Criacao = () => {
       <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6">
         {/* Cabeçalho Impactante */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent  py-10 mt-10">
             Soluções Digitais Sob Medida
           </h1>
           <div className="text-4xl mb-6">📱</div>

@@ -13,8 +13,8 @@ const Educacao = () => {
       <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6">
         {/* Cabeçalho Impactante */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-            Inovação na Educação
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent py-10 mt-10 ">
+            Inovação na Educação 
           </h1>
           <div className="text-4xl mb-6">✏️</div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

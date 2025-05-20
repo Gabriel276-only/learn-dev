@@ -6,7 +6,7 @@ const ProgramacaoWeb = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Cabeçalho */}
                 <header className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-300 bg-clip-text text-transparent mb-6">
+                <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-300 bg-clip-text text-transparent mt-10 py-10">
                       Programação Web
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">

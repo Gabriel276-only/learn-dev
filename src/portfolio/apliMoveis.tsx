@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const ApliMoveis = () => {
     return (
-        <div className="bg-gray-900 text-white min-h-screen py-12 px-4 sm:px-6">
+        <div className="bg-gray-900 text-white min-h-screen py-12 px-4 sm:px-6 ">
             <div className="max-w-6xl mx-auto">
                 {/* Cabeçalho Impactante */}
                 <header className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-500 bg-clip-text text-transparent mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-500 bg-clip-text text-transparent mt-10 py-10">
                         Aplicativos Móveis Sob Medida
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">

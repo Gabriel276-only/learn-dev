@@ -6,7 +6,7 @@ const Games = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Hero Section */}
                 <header className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-cyan-400 bg-clip-text text-transparent mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-500 to-cyan-400 bg-clip-text text-transparent py-10 mt-10">
                         Aprenda Programação Jogando
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">

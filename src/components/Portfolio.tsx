@@ -22,11 +22,11 @@ const ProjetoCard = ({ projeto, index, expanded, onExpand }: { projeto: any, ind
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="p-6 bg-gray-700 rounded-lg shadow-md border border-gray-600 hover:border-blue-400 transition-all cursor-pointer"
+      className="p-6 bg-gray-700 rounded-lg shadow-md border border-gray-600 hover:border-blue-400 transition-all cursor-pointer hover:aspect-ratio-1 "
       onClick={() => onExpand(isExpanded ? null : index)}
     >
       <motion.div layout="position" className="flex items-center justify-between">
-        <h3 className="text-xl font-semibold text-blue-400">{projeto.nome}</h3>
+        <h3 className="text-xl font-semibold text-blue-500">{projeto.nome}</h3>
         {isExpanded ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
       </motion.div>
 
@@ -63,7 +63,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 px-4 sm:px-10 bg-gray-800">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-12 text-white">
+        <h2 className="text-3xl font-semibold text-center mb-12 text-cyan-400">
           Nosso Portfólio
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -10,10 +10,9 @@ const Consultoria = () => {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen">
-      <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 flex flex-col items-center">
-        {/* Cabeçalho */}
+      <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 flex flex-col items-center">
         <header className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent py-10 mt-10">
             Transformamos Negócios com Tecnologia
           </h1>
           <div className="text-3xl mb-6">🚀</div>

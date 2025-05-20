@@ -106,16 +106,17 @@ function App() {
 
 
       {/* Sobre */}
-      <section id="sobre" className="py-20 px-10 bg-gray-800 ">
-        <h2 className="text-3xl font-semibold text-center mb-6">Sobre Nós</h2>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto text-center">
-        A BitNinja é uma empresa especializada em soluções tecnológicas e capacitação profissional, oferecendo serviços inovadores para empresas e indivíduos que desejam se destacar no mundo digital. Nosso foco é fornecer tecnologia de ponta e treinamento de alta qualidade para impulsionar negócios e carreiras.
-        </p>
-      </section>
+      <section id="sobre" className="py-20 px-10 bg-gray-800 text-white">
+  <h2 className="text-4xl font-bold text-center mb-8 text-cyan-400">Quem Somos</h2>
+  <p className="text-lg text-gray-300 max-w-3xl mx-auto text-center leading-relaxed">
+    Na <span className="text-cyan-300 font-semibold">BitNinjas</span>, transformamos tecnologia em oportunidade. Somos especialistas em soluções digitais e capacitação profissional, oferecendo ferramentas inteligentes e experiências educativas que impulsionam negócios e carreiras. Com inovação, estratégia e paixão por ensinar, conectamos pessoas ao futuro digital — hoje.
+  </p>
+</section>
+
 
       {/* Serviços */}
-      <section id="servicos" className="py-20 px-10 bg-gray-700">
-  <h2 className="text-3xl font-semibold text-center mb-6">Nossos Serviços</h2>
+      <section id="servicos" className="py-20 px-10 ">
+  <h2 className="text-3xl font-semibold text-center mb-6 text-cyan-400">Nossos Serviços</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     {[
       { nome: "Projetos Educacionais para Escolas do Futuro", link: "/servicos/educacao" },
@@ -126,9 +127,9 @@ function App() {
       <motion.div
         key={index}
         whileHover={{ scale: 1.05 }}
-        className="p-6 bg-gray-600 rounded-lg text-center shadow-lg border border-gray-500 hover:border-blue-400 transition-all"
+        className="p-6 bg-gray-700 rounded-lg text-center shadow-lg border border-gray-500 hover:border-blue-400 transition-all"
       >
-        <Link to={service.link} className="text-xl font-semibold text-blue-400 hover:underline">
+        <Link to={service.link} className="text-xl font-semibold text-blue-500 hover:underline">
           {service.nome}
         </Link>
       </motion.div>
@@ -145,7 +146,7 @@ function App() {
       {scrolled && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-5 right-5 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-all"
+          className="fixed bottom-5 right-5 bg-blue-500 text-white  rounded-full h-8 w-8  hover:bg-blue-600 transition-all"
         >
           <FontAwesomeIcon icon={faAngleUp} size="lg" />
         </button>

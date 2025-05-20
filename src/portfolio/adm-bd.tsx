@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const BdAdm = () => {
     return (
-        <div className="bg-gray-900 text-white min-h-screen py-12 px-4 sm:px-6">
+        <div className="bg-gray-900 text-white min-h-screen py-12 px-4 sm:px-6  ">
             <div className="max-w-6xl mx-auto">
                 {/* Cabeçalho com título e introdução */}
                 <header className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-300 bg-clip-text text-transparent mb-6">
+                    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-300 bg-clip-text text-transparent py-10 mt-10">
                         Administração de Banco de Dados
                     </h1>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">

@@ -1,28 +1,40 @@
+import { useRef } from 'react';
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
-import Spline from '@splinetool/react-spline';
-
 const HeroSection = () => {
+  const heroRef = useRef(null);
+
   return (
-    <>
-      <header className="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+    <section className="relative">
+      <header 
+        ref={heroRef}
+        className="HeroSection h-screen flex flex-col items-center justify-center text-center relative overflow-hidden"
+      >
         {/* Gradiente animado */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-800 via-fuchsia-500 to-cyan-300 opacity-15 animate-gradient"></div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute inset-0 bg-gradient-to-tr from-blue-800 via-cyan-300/20 to-gray-900 opacity-35"
+        ></motion.div>
 
         {/* Container de conteúdo */}
-        <div className="relative z-10 w-full px-4">
-          {/* Título animado */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="relative z-10 w-full px-4 py-4 border-2 border-blue-500 rounded-lg shadow-2xl shadow-blue-500 p-10 max-w-4xl backdrop-blur-md backdrop-brightness-90"
+        >
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white"
+            className="text-4xl sm:text-6xl md:text-8xl font-bold text-white"
           >
-            Na <span className="bg-gradient-to-r from-blue-600 to-cyan-300 inline-block text-transparent bg-clip-text">BitNinja</span>, você encontra
+            Na <span className="bg-gradient-to-r from-blue-600 to-cyan-300 inline-block text-transparent bg-clip-text fonts-alt px-1">BITNINJAS</span>, você encontra
           </motion.h1>
 
-          {/* Texto dinâmico */}
           <TypeAnimation
             sequence={[
               "Soluções educacionais inovadoras",
@@ -38,22 +50,22 @@ const HeroSection = () => {
             ]}
             wrapper="span"
             speed={60}
-            className="text-lg sm:text-xl md:text-2xl font-medium text-cyan-400 mt-4 block"
+            className="text-lg sm:text-xl md:text-3xl font-medium text-cyan-400 mt-4 block"
             repeat={Infinity}
           />
-        </div>
+        </motion.div>
 
-        {/* Container Spline - ajustado para responsividade */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <div className="relative w-full h-full">
-          <Spline scene="https://prod.spline.design/N-lNSAHDTu1wDhvb/scene.splinecode" 
-
-              className="absolute right-0 bottom-0 w-full h-full invisible md:visible md:w-3/4 md:h-3/4 lg:w-2/3 lg:h-2/3 xl:w-1/2 xl:h-1/2"
-            />
-          </div>
-        </div>
+        <motion.h4
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="text-5xl md:text-6xl font-bold fonts-alt absolute right-0 bottom-0 p-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-cyan-300"
+        >
+          O FUTURO
+        </motion.h4>
       </header>
-    </>
+
+    </section>
   );
 };
 
